@@ -1,0 +1,579 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background: #064b9b;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo small {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd43b;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 40, 90, 0.75),
+            rgba(0, 40, 90, 0.75)
+        ),
+        url("school.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.hero-content > p:first-child {
+    color: #55b7ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2196f3;
+}
+
+.hero-content p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background: #087cf5;
+    color: white;
+
+    padding: 12px 25px;
+    margin: 5px;
+
+    border-radius: 4px;
+    border: 2px solid #087cf5;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #055fc0;
+    border-color: #055fc0;
+}
+
+.btn.secondary {
+    background: transparent;
+    border-color: white;
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: #064b9b;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title > p:first-child,
+.heading {
+    color: #087cf5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.section-title h2,
+.about h2,
+.contact h2 {
+    font-size: 35px;
+    color: #063b78;
+    margin: 8px 0 12px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background: #f0f7ff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+
+    border-bottom: 4px solid #087cf5;
+}
+
+.stat h3 {
+    color: #064b9b;
+    font-size: 35px;
+}
+
+.stat p {
+    color: #555;
+}
+
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programs {
+    background: #f4f9ff;
+    text-align: center;
+}
+
+.program-grid {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.program {
+    background: white;
+    padding: 30px 20px;
+
+    border-radius: 8px;
+    border: 1px solid #dcecff;
+
+    font-size: 30px;
+
+    transition: 0.3s;
+}
+
+.program:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 70, 150, 0.12);
+}
+
+.program h3 {
+    color: #064b9b;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.program p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* =========================
+   TEACHERS
+========================= */
+
+.teachers {
+    text-align: center;
+}
+
+.teacher-grid {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.teacher {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.teacher:hover {
+    transform: translateY(-5px);
+}
+
+.teacher-photo {
+    width: 120px;
+    height: 120px;
+
+    margin: auto;
+
+    border-radius: 50%;
+    background: #e8f3ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+}
+
+.teacher h3 {
+    color: #064b9b;
+    margin-top: 15px;
+}
+
+.teacher p {
+    color: #666;
+}
+
+
+/* =========================
+   ADMISSION SECTION
+========================= */
+
+.admission {
+    background: #064b9b;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 45px 10%;
+}
+
+.admission h2 {
+    font-size: 30px;
+}
+
+.admission p {
+    margin-top: 5px;
+}
+
+.admission .btn {
+    background: transparent;
+    border-color: white;
+}
+
+.admission .btn:hover {
+    background: white;
+    color: #064b9b;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: #f4f9ff;
+    text-align: center;
+}
+
+.gallery-grid {
+    max-width: 1000px;
+    /* margin: auto; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    /* margin-top: 35px; */
+}
+
+.gallery-grid div {
+    height: 100%;
+    padding: 30px;
+    background: #dcecff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #064b9b;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.gallery-grid div:hover {
+    transform: scale(1.03);
+    background: #c9e4ff;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+}
+
+.contact-info {
+    padding-top: 10px;
+}
+
+.contact-info > p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccd9e8;
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #087cf5;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #032c5b;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teacher-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admission {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section-title h2,
+    .about h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+}
